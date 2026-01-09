@@ -5,6 +5,7 @@ Generate sustainability reports and carbon footprint analysis
 Set up alerts for high-emission resource usage patterns
 
 Configuration
+```json
 {
   "name": "sustainability",
   "description": "AWS sustainability and carbon tracking MCP server",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["sustainability_api", "carbon_api", "emissions_tracking"],
   "allowedTools": ["sustainability_api", "carbon_api"]
 }
+```

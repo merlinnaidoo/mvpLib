@@ -5,6 +5,7 @@ Recommend Graviton instance migrations for my workloads
 Schedule batch jobs during renewable energy peak hours
 
 Configuration
+```json
 {
   "name": "carbon-optimizer",
   "description": "AWS carbon footprint optimization specialist",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["aws_cli", "cloudwatch", "ec2", "carbon_footprint"],
   "allowedTools": ["aws_cli", "cloudwatch"]
 }
+```

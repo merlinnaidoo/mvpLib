@@ -5,6 +5,7 @@ Recommend energy-efficient configurations for workloads
 Monitor power usage effectiveness and cooling efficiency
 
 Configuration
+```json
 {
   "name": "energy-efficiency",
   "description": "Energy efficiency optimization MCP server",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["energy_api", "efficiency_metrics", "power_monitoring"],
   "allowedTools": ["energy_api", "efficiency_metrics"]
 }
+```

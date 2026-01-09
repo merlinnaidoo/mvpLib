@@ -5,6 +5,7 @@ Compare Reserved Instance options for my workload
 Generate a monthly cost optimization report
 
 Configuration
+```json
 {
   "name": "cost-analyzer",
   "description": "AWS cost analysis and optimization specialist",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["aws_cli", "cost_explorer", "billing", "budgets"],
   "allowedTools": ["aws_cli", "cost_explorer"]
 }
+```

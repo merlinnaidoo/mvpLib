@@ -5,6 +5,7 @@ Monitor Lambda function performance and errors
 Configure log aggregation across multiple services
 
 Configuration
+```json
 {
   "name": "monitoring",
   "description": "AWS monitoring and observability specialist",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["aws_cli", "cloudwatch", "xray", "logs"],
   "allowedTools": ["aws_cli", "cloudwatch"]
 }
+```

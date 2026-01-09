@@ -5,6 +5,7 @@ Set up automated alerting for critical system metrics
 Analyze performance trends over time
 
 Configuration
+```json
 {
   "name": "cloudwatch",
   "description": "CloudWatch metrics and logging MCP server",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["cloudwatch_api", "logs_api", "metrics_api"],
   "allowedTools": ["cloudwatch_api", "logs_api"]
 }
+```

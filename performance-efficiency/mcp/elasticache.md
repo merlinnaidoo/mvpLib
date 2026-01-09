@@ -5,6 +5,7 @@ Monitor cache performance and hit ratios
 Optimize cache eviction policies and memory usage
 
 Configuration
+```json
 {
   "name": "elasticache",
   "description": "AWS ElastiCache in-memory caching MCP server",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["elasticache_api", "redis_api", "memcached_api"],
   "allowedTools": ["elasticache_api", "redis_api"]
 }
+```

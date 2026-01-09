@@ -5,6 +5,7 @@ Analyze failed deployments in the last hour
 Create a runbook for common database connection issues
 
 Configuration
+```json
 {
   "name": "incident-response",
   "description": "Automated incident response and troubleshooting specialist",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["aws_cli", "systems_manager", "cloudtrail"],
   "allowedTools": ["aws_cli", "systems_manager"]
 }
+```

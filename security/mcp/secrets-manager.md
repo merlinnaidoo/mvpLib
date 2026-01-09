@@ -5,6 +5,7 @@ Manage encryption keys for sensitive data
 Audit secret access patterns and usage
 
 Configuration
+```json
 {
   "name": "secrets-manager",
   "description": "AWS Secrets Manager secure credential management MCP server",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["secrets_api", "rotation_api", "encryption_api"],
   "allowedTools": ["secrets_api", "rotation_api"]
 }
+```

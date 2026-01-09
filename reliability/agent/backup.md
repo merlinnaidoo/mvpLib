@@ -5,6 +5,7 @@ Create backup retention policies based on compliance requirements
 Test backup restoration procedures and validate data integrity
 
 Configuration
+```json
 {
   "name": "backup",
   "description": "Automated backup strategy implementation specialist",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["aws_cli", "backup", "rds", "ebs", "s3"],
   "allowedTools": ["aws_cli", "backup"]
 }
+```

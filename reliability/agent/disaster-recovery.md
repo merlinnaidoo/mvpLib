@@ -5,6 +5,7 @@ Create automated backup and recovery workflows
 Analyze RTO and RPO requirements for business continuity
 
 Configuration
+```json
 {
   "name": "disaster-recovery",
   "description": "Disaster recovery planning and orchestration specialist",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["aws_cli", "backup", "site_recovery", "route53"],
   "allowedTools": ["aws_cli", "backup"]
 }
+```

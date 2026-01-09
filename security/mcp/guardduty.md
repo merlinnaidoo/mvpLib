@@ -5,6 +5,7 @@ Set up automated security incident response workflows
 Generate security reports and compliance dashboards
 
 Configuration
+```json
 {
   "name": "guardduty",
   "description": "AWS GuardDuty threat detection MCP server",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["guardduty_api", "findings_api", "threat_intel"],
   "allowedTools": ["guardduty_api", "findings_api"]
 }
+```

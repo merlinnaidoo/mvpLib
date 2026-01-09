@@ -5,6 +5,7 @@ Review cross-account access policies and trust relationships
 Generate IAM policy recommendations for specific use cases
 
 Configuration
+```json
 {
   "name": "iam-analyzer",
   "description": "IAM policy analysis and access management specialist",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["aws_cli", "iam", "access_analyzer", "organizations"],
   "allowedTools": ["aws_cli", "iam"]
 }
+```

@@ -5,6 +5,7 @@ Analyze data transfer patterns to reduce network emissions
 Create a green computing strategy for multi-region deployment
 
 Configuration
+```json
 {
   "name": "green-architecture",
   "description": "Sustainable AWS architecture design specialist",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["aws_cli", "cloudformation", "terraform", "sustainability"],
   "allowedTools": ["aws_cli", "cloudformation"]
 }
+```

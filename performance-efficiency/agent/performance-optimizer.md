@@ -5,6 +5,7 @@ Review instance types and recommend better alternatives
 Monitor and improve application response times
 
 Configuration
+```json
 {
   "name": "performance-optimizer",
   "description": "AWS resource performance analysis and optimization specialist",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["aws_cli", "cloudwatch", "compute_optimizer", "rds"],
   "allowedTools": ["aws_cli", "cloudwatch"]
 }
+```

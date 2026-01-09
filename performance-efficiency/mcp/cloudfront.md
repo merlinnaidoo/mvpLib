@@ -5,6 +5,7 @@ Analyze cache hit ratios and origin request patterns
 Set up custom origins and behaviors for different content types
 
 Configuration
+```json
 {
   "name": "cloudfront",
   "description": "AWS CloudFront CDN management MCP server",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["cloudfront_api", "cache_api", "distribution_api"],
   "allowedTools": ["cloudfront_api", "cache_api"]
 }
+```

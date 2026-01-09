@@ -5,6 +5,7 @@ Monitor backup job status and success rates
 Restore data from backups with point-in-time recovery
 
 Configuration
+```json
 {
   "name": "s3-backup",
   "description": "S3-based backup and recovery MCP server",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["s3_api", "backup_api", "glacier_api", "replication"],
   "allowedTools": ["s3_api", "backup_api"]
 }
+```

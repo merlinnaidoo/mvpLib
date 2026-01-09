@@ -5,6 +5,7 @@ Analyze scaling events and optimize scaling policies
 Create scaling strategies for containerized applications
 
 Configuration
+```json
 {
   "name": "scaling",
   "description": "Automated scaling configuration and optimization specialist",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["aws_cli", "autoscaling", "cloudwatch", "ecs", "eks"],
   "allowedTools": ["aws_cli", "autoscaling"]
 }
+```

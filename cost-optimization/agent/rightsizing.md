@@ -5,6 +5,7 @@ Compare performance impact of different instance families
 Create a rightsizing plan with cost-benefit analysis
 
 Configuration
+```json
 {
   "name": "rightsizing",
   "description": "AWS resource rightsizing specialist based on utilization analysis",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["aws_cli", "cloudwatch", "compute_optimizer", "trusted_advisor"],
   "allowedTools": ["aws_cli", "cloudwatch"]
 }
+```

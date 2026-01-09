@@ -5,6 +5,7 @@ Set up automated failover for high availability
 Analyze database metrics and resource utilization
 
 Configuration
+```json
 {
   "name": "rds",
   "description": "AWS RDS database management MCP server",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["rds_api", "performance_insights", "cloudwatch_db"],
   "allowedTools": ["rds_api", "performance_insights"]
 }
+```

@@ -5,6 +5,7 @@ Review security and performance recommendations
 Generate comprehensive optimization reports
 
 Configuration
+```json
 {
   "name": "trusted-advisor",
   "description": "AWS Trusted Advisor optimization recommendations MCP server",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["trusted_advisor_api", "support_api", "recommendations"],
   "allowedTools": ["trusted_advisor_api", "support_api"]
 }
+```

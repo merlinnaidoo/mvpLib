@@ -5,6 +5,7 @@ Set up cost anomaly detection and budget alerts
 Analyze cost trends and forecast future spending
 
 Configuration
+```json
 {
   "name": "cost-explorer",
   "description": "AWS Cost Explorer data analysis MCP server",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["cost_explorer_api", "billing_api", "budgets_api"],
   "allowedTools": ["cost_explorer_api", "billing_api"]
 }
+```

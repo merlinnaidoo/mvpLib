@@ -5,6 +5,7 @@ Analyze service dependencies and call patterns
 Generate service maps for complex applications
 
 Configuration
+```json
 {
   "name": "xray",
   "description": "AWS X-Ray distributed tracing MCP server",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["xray_api", "trace_api", "service_map"],
   "allowedTools": ["xray_api", "trace_api"]
 }
+```

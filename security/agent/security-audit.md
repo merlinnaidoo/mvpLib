@@ -5,6 +5,7 @@ Review security groups for unnecessary open ports
 Generate a compliance report for SOC 2 requirements
 
 Configuration
+```json
 {
   "name": "security-audit",
   "description": "AWS security assessment and compliance specialist",
@@ -12,3 +13,4 @@ Configuration
   "tools": ["aws_cli", "security_hub", "config", "inspector"],
   "allowedTools": ["aws_cli", "security_hub"]
 }
+```
