@@ -66,19 +66,8 @@
             <textarea id="config" class="json-textarea" required placeholder='{"name": "your-name", "description": "Your description", "prompt": "Your prompt", "tools": ["tool1", "tool2"], "allowedTools": ["tool1"]}'></textarea>
         </div>
 
-        <button type="button" onclick="generateContribution()">Generate Contribution</button>
+        <button type="button" onclick="generateContribution()">Submit Contribution</button>
     </form>
-
-    <div id="result" style="display: none;">
-        <h2>Your Contribution</h2>
-        <div class="preview">
-            <h3>File: <span id="resultPath"></span></h3>
-            <pre id="resultContent"></pre>
-        </div>
-        <p><strong>Next step:</strong></p>
-        <p><a id="prLink" href="#" target="_blank" style="background: #0366d6; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block;">Create Pull Request on GitHub</a></p>
-        <p><em>This will open GitHub with your content pre-filled. Just click "Propose new file" to submit.</em></p>
-    </div>
 
     <div id="status"></div>
 
@@ -114,22 +103,20 @@ ${promptLines}
 ${prettyConfig}
 \`\`\``;
 
-                // Show result
-                const filePath = `${pillar}/${type}/${filename}.md`;
-                document.getElementById('resultPath').textContent = filePath;
-                document.getElementById('resultContent').textContent = markdownContent;
-                
                 // Create GitHub PR link
                 const owner = 'merlinnaidoo';
                 const repo = 'mvpLib';
-                const branchName = `contribution-${filename}`;
+                const filePath = `${pillar}/${type}/${filename}.md`;
                 const encodedContent = encodeURIComponent(markdownContent);
                 const prUrl = `https://github.com/${owner}/${repo}/new/main?filename=${filePath}&value=${encodedContent}`;
                 
-                document.getElementById('prLink').href = prUrl;
-                document.getElementById('result').style.display = 'block';
+                // Show success message and redirect
+                showStatus('Redirecting to GitHub to create your pull request...', 'success');
                 
-                showStatus('Contribution generated successfully! Follow the steps below.', 'success');
+                // Redirect after 2 seconds
+                setTimeout(() => {
+                    window.open(prUrl, '_blank');
+                }, 2000);
                 
             } catch (error) {
                 showStatus('Invalid JSON configuration. Please check your syntax: ' + error.message, 'error');
