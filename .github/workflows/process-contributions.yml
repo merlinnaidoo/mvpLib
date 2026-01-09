@@ -2,7 +2,7 @@ name: Convert Issue to PR
 
 on:
   issues:
-    types: [opened, labeled]
+    types: [opened, labeled, edited, reopened]
 
 jobs:
   create-pr:
