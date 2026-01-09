@@ -1,0 +1,21 @@
+name: Process Contributions
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  process-contribution:
+    if: contains(github.event.label.name, 'approved')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add approved label comment
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ This contribution has been approved and will be added to the library shortly. Thank you for your contribution!'
+            })

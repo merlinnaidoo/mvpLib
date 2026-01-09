@@ -26,3 +26,14 @@ Each file contains:
 1. Browse to find relevant agent/MCP
 2. Copy the configuration JSON
 3. Use the usage prompts as examples
+
+## Contributing
+
+We welcome contributions! You can contribute in two ways:
+
+1. **GitHub Issues**: Use our [contribution templates](../../issues/new/choose) to submit new agents or MCP servers
+2. **Pull Requests**: Fork the repo, use `TEMPLATE.md`, and submit a PR
+
+All contributions go through a review process before being added to the library.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
