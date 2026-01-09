@@ -1,6 +1,8 @@
 ## Usage Prompts
 
 <!-- Replace this section with your prompts. If more than 1 prompt, number them -->
+Insert your prompts here. If you have multiple prompts, number them.
+
 1. Prompt1
 2. Prompt2
 3. Prompt3
