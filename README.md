@@ -29,11 +29,8 @@ Each file contains:
 
 ## Contributing
 
-We welcome contributions! You can contribute in two ways:
+We welcome contributions! 
 
-1. **[Submit via GitHub Issue Form](../../issues/new?assignees=&labels=contribution%2Cneeds-review&projects=&template=contribution.yml)** - Use our structured form (automatically creates PR)
-2. **Pull Requests**: Fork the repo, use `TEMPLATE.md`, and submit a PR
+**[Submit via GitHub Issue Form](../../issues/new?assignees=&labels=contribution%2Cneeds-review&projects=&template=contribution.yml)** - Use our structured form (automatically creates PR)
 
 All contributions go through a review process before being added to the library.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
