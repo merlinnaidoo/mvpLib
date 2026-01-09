@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Set up automated backups for my RDS databases
 Configure cross-region backup replication for critical data
 Create backup retention policies based on compliance requirements
 Test backup restoration procedures and validate data integrity
 
-Configuration
+## Configuration
 ```json
 {
   "name": "backup",

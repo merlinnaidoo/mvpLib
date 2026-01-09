@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Analyze performance bottlenecks in my application
 Optimize database query performance and indexing
 Review instance types and recommend better alternatives
 Monitor and improve application response times
 
-Configuration
+## Configuration
 ```json
 {
   "name": "performance-optimizer",

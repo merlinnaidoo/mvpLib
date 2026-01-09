@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Analyze my AWS spending patterns across all services
 Identify unused resources and potential cost savings
 Compare Reserved Instance options for my workload
 Generate a monthly cost optimization report
 
-Configuration
+## Configuration
 ```json
 {
   "name": "cost-analyzer",

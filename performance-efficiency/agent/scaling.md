@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Configure auto-scaling for my EC2 instances based on demand
 Set up predictive scaling for my application workload
 Analyze scaling events and optimize scaling policies
 Create scaling strategies for containerized applications
 
-Configuration
+## Configuration
 ```json
 {
   "name": "scaling",

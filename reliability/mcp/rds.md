@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Monitor database performance and connection health
 Optimize query performance and identify slow queries
 Set up automated failover for high availability
 Analyze database metrics and resource utilization
 
-Configuration
+## Configuration
 ```json
 {
   "name": "rds",

@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Securely store and retrieve application secrets
 Rotate database passwords and API keys automatically
 Manage encryption keys for sensitive data
 Audit secret access patterns and usage
 
-Configuration
+## Configuration
 ```json
 {
   "name": "secrets-manager",

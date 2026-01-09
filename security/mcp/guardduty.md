@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Monitor security findings and threat intelligence
 Analyze malicious activity patterns and anomalies
 Set up automated security incident response workflows
 Generate security reports and compliance dashboards
 
-Configuration
+## Configuration
 ```json
 {
   "name": "guardduty",

@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Audit my S3 buckets for public access vulnerabilities
 Check IAM policies for overly permissive permissions
 Review security groups for unnecessary open ports
 Generate a compliance report for SOC 2 requirements
 
-Configuration
+## Configuration
 ```json
 {
   "name": "security-audit",

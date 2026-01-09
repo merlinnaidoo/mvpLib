@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Analyze my AWS carbon footprint across all regions
 Identify idle resources contributing to unnecessary emissions
 Recommend Graviton instance migrations for my workloads
 Schedule batch jobs during renewable energy peak hours
 
-Configuration
+## Configuration
 ```json
 {
   "name": "carbon-optimizer",

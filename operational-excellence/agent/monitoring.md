@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Set up CloudWatch alarms for my EC2 instances
 Create custom dashboards for application metrics
 Monitor Lambda function performance and errors
 Configure log aggregation across multiple services
 
-Configuration
+## Configuration
 ```json
 {
   "name": "monitoring",

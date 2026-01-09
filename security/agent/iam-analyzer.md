@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Analyze IAM roles and permissions for least privilege compliance
 Identify unused IAM users and roles for cleanup
 Review cross-account access policies and trust relationships
 Generate IAM policy recommendations for specific use cases
 
-Configuration
+## Configuration
 ```json
 {
   "name": "iam-analyzer",

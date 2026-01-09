@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Optimize resource scheduling for renewable energy availability
 Analyze energy consumption patterns across different instance types
 Recommend energy-efficient configurations for workloads
 Monitor power usage effectiveness and cooling efficiency
 
-Configuration
+## Configuration
 ```json
 {
   "name": "energy-efficiency",

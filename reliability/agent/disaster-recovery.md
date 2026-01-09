@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Design a disaster recovery strategy for my multi-tier application
 Test failover procedures for my database systems
 Create automated backup and recovery workflows
 Analyze RTO and RPO requirements for business continuity
 
-Configuration
+## Configuration
 ```json
 {
   "name": "disaster-recovery",

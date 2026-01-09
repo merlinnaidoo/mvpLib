@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Configure CloudFront distributions for global content delivery
 Optimize cache policies and TTL settings for better performance
 Analyze cache hit ratios and origin request patterns
 Set up custom origins and behaviors for different content types
 
-Configuration
+## Configuration
 ```json
 {
   "name": "cloudfront",

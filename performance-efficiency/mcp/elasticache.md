@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Set up Redis clusters for application caching
 Configure ElastiCache for session storage and data caching
 Monitor cache performance and hit ratios
 Optimize cache eviction policies and memory usage
 
-Configuration
+## Configuration
 ```json
 {
   "name": "elasticache",

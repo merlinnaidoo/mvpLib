@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Recommend optimal instance types for my current workloads
 Analyze CPU and memory utilization to suggest downsizing
 Compare performance impact of different instance families
 Create a rightsizing plan with cost-benefit analysis
 
-Configuration
+## Configuration
 ```json
 {
   "name": "rightsizing",

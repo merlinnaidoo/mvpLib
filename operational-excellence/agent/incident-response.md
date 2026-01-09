@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Investigate why my application is responding slowly
 Check for any recent configuration changes that might cause issues
 Analyze failed deployments in the last hour
 Create a runbook for common database connection issues
 
-Configuration
+## Configuration
 ```json
 {
   "name": "incident-response",

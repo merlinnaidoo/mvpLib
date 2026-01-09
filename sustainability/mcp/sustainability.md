@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Track carbon emissions data across AWS services and regions
 Monitor energy efficiency metrics for compute resources
 Generate sustainability reports and carbon footprint analysis
 Set up alerts for high-emission resource usage patterns
 
-Configuration
+## Configuration
 ```json
 {
   "name": "sustainability",

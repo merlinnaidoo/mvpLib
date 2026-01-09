@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Get cost optimization recommendations from Trusted Advisor
 Identify underutilized resources and idle instances
 Review security and performance recommendations
 Generate comprehensive optimization reports
 
-Configuration
+## Configuration
 ```json
 {
   "name": "trusted-advisor",

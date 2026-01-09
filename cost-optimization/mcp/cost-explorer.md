@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Query detailed cost and usage data across AWS services
 Create custom cost reports and spending analysis
 Set up cost anomaly detection and budget alerts
 Analyze cost trends and forecast future spending
 
-Configuration
+## Configuration
 ```json
 {
   "name": "cost-explorer",

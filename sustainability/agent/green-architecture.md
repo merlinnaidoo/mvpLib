@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Design sustainable architecture patterns for my application
 Recommend energy-efficient AWS services for my workload
 Analyze data transfer patterns to reduce network emissions
 Create a green computing strategy for multi-region deployment
 
-Configuration
+## Configuration
 ```json
 {
   "name": "green-architecture",

@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Configure automated S3 backup policies for critical data
 Set up cross-region replication for disaster recovery
 Monitor backup job status and success rates
 Restore data from backups with point-in-time recovery
 
-Configuration
+## Configuration
 ```json
 {
   "name": "s3-backup",

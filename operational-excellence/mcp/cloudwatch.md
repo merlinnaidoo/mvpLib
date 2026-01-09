@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Connect to CloudWatch metrics and create custom dashboards
 Query application logs across multiple log groups
 Set up automated alerting for critical system metrics
 Analyze performance trends over time
 
-Configuration
+## Configuration
 ```json
 {
   "name": "cloudwatch",

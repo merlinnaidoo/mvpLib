@@ -1,10 +1,11 @@
-Usage Prompts:
+## Usage Prompts
+
 Trace application requests across distributed services
 Identify performance bottlenecks in microservices architecture
 Analyze service dependencies and call patterns
 Generate service maps for complex applications
 
-Configuration
+## Configuration
 ```json
 {
   "name": "xray",
