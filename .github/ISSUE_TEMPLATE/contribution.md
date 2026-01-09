@@ -7,10 +7,7 @@ assignees: ''
 ---
 
 ## Details
-**Type:** (Agent or MCP Server)
-**Suggested Pillar:** (operational-excellence/security/reliability/performance-efficiency/cost-optimization/sustainability)
-**Name:** 
-**Brief Description:** 
+**Suggested Pillar:** (operational-excellence/security/reliability/performance-efficiency/cost-optimization/sustainability) 
 
 ## Usage Prompts
 ```
