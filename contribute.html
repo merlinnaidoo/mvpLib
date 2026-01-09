@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribute to MVP Kiro Prompt Library</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        textarea { height: 100px; resize: vertical; }
+        .json-textarea { height: 200px; font-family: monospace; }
+        button { background: #0366d6; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0256cc; }
+        .status { margin-top: 20px; padding: 10px; border-radius: 4px; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        .preview { background: #f8f9fa; padding: 15px; border: 1px solid #dee2e6; border-radius: 4px; margin-top: 20px; }
+        pre { background: #f8f9fa; padding: 10px; border-radius: 4px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>Contribute to MVP Kiro Prompt Library</h1>
+    
+    <div class="info">
+        <p><strong>How it works:</strong> Fill out this form to generate your contribution. You'll get a link to create a pull request on GitHub with your content pre-filled.</p>
+    </div>
+
+    <form id="contributionForm">
+        <div class="form-group">
+            <label for="pillar">Well-Architected Framework Pillar:</label>
+            <select id="pillar" required>
+                <option value="">Select a pillar...</option>
+                <option value="operational-excellence">Operational Excellence</option>
+                <option value="security">Security</option>
+                <option value="reliability">Reliability</option>
+                <option value="performance-efficiency">Performance Efficiency</option>
+                <option value="cost-optimization">Cost Optimization</option>
+                <option value="sustainability">Sustainability</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="type">Type:</label>
+            <select id="type" required>
+                <option value="">Select type...</option>
+                <option value="agent">Agent</option>
+                <option value="mcp">MCP Server</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="filename">Filename (without .md extension):</label>
+            <input type="text" id="filename" required placeholder="e.g., my-awesome-agent">
+        </div>
+
+        <div class="form-group">
+            <label for="prompts">Usage Prompts (one per line):</label>
+            <textarea id="prompts" required placeholder="Enter your usage prompts here, one per line"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="config">Configuration JSON:</label>
+            <textarea id="config" class="json-textarea" required placeholder='{"name": "your-name", "description": "Your description", "prompt": "Your prompt", "tools": ["tool1", "tool2"], "allowedTools": ["tool1"]}'></textarea>
+        </div>
+
+        <button type="button" onclick="generateContribution()">Generate Contribution</button>
+    </form>
+
+    <div id="result" style="display: none;">
+        <h2>Your Contribution</h2>
+        <div class="preview">
+            <h3>File: <span id="resultPath"></span></h3>
+            <pre id="resultContent"></pre>
+        </div>
+        <p><strong>Next steps:</strong></p>
+        <ol>
+            <li>Copy the content above</li>
+            <li><a id="prLink" href="#" target="_blank">Click here to create a pull request</a></li>
+            <li>Paste the content into the new file</li>
+            <li>Submit the pull request for review</li>
+        </ol>
+    </div>
+
+    <div id="status"></div>
+
+    <script>
+        function generateContribution() {
+            const pillar = document.getElementById('pillar').value;
+            const type = document.getElementById('type').value;
+            const filename = document.getElementById('filename').value;
+            const prompts = document.getElementById('prompts').value;
+            const config = document.getElementById('config').value;
+
+            // Validate inputs
+            if (!pillar || !type || !filename || !prompts || !config) {
+                showStatus('Please fill in all fields.', 'error');
+                return;
+            }
+
+            // Validate JSON
+            try {
+                const parsedConfig = JSON.parse(config);
+                // Pretty print the JSON
+                const prettyConfig = JSON.stringify(parsedConfig, null, 2);
+                
+                // Create markdown content
+                const promptLines = prompts.split('\n').filter(p => p.trim()).map((prompt, index) => `${index + 1}. ${prompt.trim()}`).join('\n');
+                
+                const markdownContent = `## Usage Prompts
+
+${promptLines}
+
+## Configuration
+\`\`\`json
+${prettyConfig}
+\`\`\``;
+
+                // Show result
+                const filePath = `${pillar}/${type}/${filename}.md`;
+                document.getElementById('resultPath').textContent = filePath;
+                document.getElementById('resultContent').textContent = markdownContent;
+                
+                // Create GitHub PR link
+                const owner = 'merlinnaidoo';
+                const repo = 'mvpLib';
+                const branchName = `contribution-${filename}`;
+                const encodedContent = encodeURIComponent(markdownContent);
+                const prUrl = `https://github.com/${owner}/${repo}/new/main?filename=${filePath}&value=${encodedContent}`;
+                
+                document.getElementById('prLink').href = prUrl;
+                document.getElementById('result').style.display = 'block';
+                
+                showStatus('Contribution generated successfully! Follow the steps below.', 'success');
+                
+            } catch (error) {
+                showStatus('Invalid JSON configuration. Please check your syntax: ' + error.message, 'error');
+            }
+        }
+
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = `<div class="status ${type}">${message}</div>`;
+        }
+    </script>
+</body>
+</html>
