@@ -1,4 +1,4 @@
-name: Process Contributions
+name: Convert Issue to PR
 
 on:
   issues:
@@ -31,6 +31,11 @@ jobs:
           
           if [ -z "$PILLAR" ] || [ -z "$TYPE" ] || [ -z "$FILENAME" ] || [ -z "$PROMPTS" ] || [ -z "$CONFIG" ]; then
             echo "Error: Missing required fields"
+            echo "Pillar: '$PILLAR'"
+            echo "Type: '$TYPE'" 
+            echo "Filename: '$FILENAME'"
+            echo "Prompts: '$PROMPTS'"
+            echo "Config: '$CONFIG'"
             exit 1
           fi
           
