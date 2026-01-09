@@ -8,6 +8,8 @@
 ## Configuration
 
 <!-- Replace this entire section with your JSON config for MCP or agent -->
+Insert JSON config for MCP or agent here
+
 ```json
 {
   "name": "insert-name-here",
