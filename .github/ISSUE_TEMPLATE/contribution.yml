@@ -1,0 +1,68 @@
+name: Contribution
+description: Submit a new Kiro agent or MCP server configuration
+title: "[CONTRIBUTION] "
+labels: ["contribution", "needs-review"]
+body:
+  - type: dropdown
+    id: pillar
+    attributes:
+      label: Well-Architected Framework Pillar
+      description: Which pillar should this contribution be added to?
+      options:
+        - operational-excellence
+        - security
+        - reliability
+        - performance-efficiency
+        - cost-optimization
+        - sustainability
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      description: Is this an agent or MCP server?
+      options:
+        - agent
+        - mcp
+    validations:
+      required: true
+  
+  - type: input
+    id: filename
+    attributes:
+      label: Filename
+      description: Name for the file (without .md extension)
+      placeholder: e.g., my-awesome-agent
+    validations:
+      required: true
+  
+  - type: textarea
+    id: prompts
+    attributes:
+      label: Usage Prompts
+      description: Enter your usage prompts (numbered)
+      placeholder: |
+        1. First prompt here
+        2. Second prompt here
+        3. Third prompt here
+    validations:
+      required: true
+  
+  - type: textarea
+    id: config
+    attributes:
+      label: Configuration
+      description: JSON configuration for your agent or MCP server
+      placeholder: |
+        {
+          "name": "your-name",
+          "description": "Your description",
+          "prompt": "Your prompt",
+          "tools": ["tool1", "tool2"],
+          "allowedTools": ["tool1"]
+        }
+      render: json
+    validations:
+      required: true
