@@ -2,20 +2,76 @@ name: Process Contributions
 
 on:
   issues:
-    types: [labeled]
+    types: [opened]
 
 jobs:
-  process-contribution:
-    if: contains(github.event.label.name, 'approved')
+  create-pr:
+    if: contains(github.event.issue.labels.*.name, 'contribution')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
     steps:
-      - name: Add approved label comment
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Create contribution file
+        run: |
+          # Parse issue body - extract content between headers
+          BODY='${{ github.event.issue.body }}'
+          
+          PILLAR=$(echo "$BODY" | sed -n '/### Well-Architected Framework Pillar/,/###/p' | grep -v "###" | grep -v "^$" | head -1 | xargs)
+          TYPE=$(echo "$BODY" | sed -n '/### Type/,/###/p' | grep -v "###" | grep -v "^$" | head -1 | xargs)
+          FILENAME=$(echo "$BODY" | sed -n '/### Filename/,/###/p' | grep -v "###" | grep -v "^$" | head -1 | xargs)
+          PROMPTS=$(echo "$BODY" | sed -n '/### Usage Prompts/,/###/p' | sed '1d;$d' | sed '/^$/d')
+          CONFIG=$(echo "$BODY" | sed -n '/### Configuration/,$p' | sed '1d')
+          
+          echo "FILENAME_CLEAN=$FILENAME" >> $GITHUB_ENV
+          
+          if [ -z "$PILLAR" ] || [ -z "$TYPE" ] || [ -z "$FILENAME" ] || [ -z "$PROMPTS" ] || [ -z "$CONFIG" ]; then
+            echo "Error: Missing required fields"
+            exit 1
+          fi
+          
+          # Create the markdown file
+          cat > "$PILLAR/$TYPE/$FILENAME.md" << EOF
+          ## Usage Prompts
+          
+          $PROMPTS
+          
+          ## Configuration
+          \`\`\`json
+          $CONFIG
+          \`\`\`
+          EOF
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: "Contribution: ${{ env.FILENAME_CLEAN }}"
+          body: |
+            This PR addresses issue #${{ github.event.issue.number }}.
+            
+            Closes #${{ github.event.issue.number }}
+          branch: "contribution-${{ github.event.issue.number }}"
+          base: "main"
+          commit-message: "Add contribution from issue #${{ github.event.issue.number }}"
+
+      - name: Close issue
         uses: actions/github-script@v6
         with:
           script: |
-            github.rest.issues.createComment({
+            await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '✅ This contribution has been approved and will be added to the library shortly. Thank you for your contribution!'
-            })
+              body: '✅ Your contribution has been converted to a Pull Request for review!'
+            });
+            
+            await github.rest.issues.update({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'closed'
+            });

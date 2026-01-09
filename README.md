@@ -31,7 +31,7 @@ Each file contains:
 
 We welcome contributions! You can contribute in two ways:
 
-1. **GitHub Issues**: Use our [contribution templates](../../issues/new/choose) to submit new agents or MCP servers
+1. **[Submit via GitHub Issue Form](../../issues/new?assignees=&labels=contribution%2Cneeds-review&projects=&template=contribution.yml)** - Use our structured form (automatically creates PR)
 2. **Pull Requests**: Fork the repo, use `TEMPLATE.md`, and submit a PR
 
 All contributions go through a review process before being added to the library.
